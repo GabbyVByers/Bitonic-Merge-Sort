@@ -36,7 +36,7 @@ int main()
 	double time1 = 0.0;
 	double time2 = 0.0;
 
-	unsigned int length = 10;
+	unsigned int length = 100000;
 	unsigned int* array1 = new unsigned int[length];
 	unsigned int* array2 = new unsigned int[length];
 
@@ -57,7 +57,7 @@ int main()
 	profiler.stop();
 	time2 = profiler.time();
 
-	std::cout << "Number of Elementes: " << length << "\n";
+	std::cout << "Number of Elements: " << length << "\n";
 	std::cout << "Naive Sorting Time         (ms): " << time1 << "\n";
 	std::cout << "Bitonic Merge Sorting Time (ms): " << time2 << "\n";
 	std::cout << "Bitonic is " << (time1 / time2) << " times faster\n";
